@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Homepage</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+       margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: url('hhhh.jpg');
+      height: 100vh;
+    }
+    .homepage {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 30px;
+      width: 80%;
+      max-width: 900px;
+    }
+    .card {
+      background: lightblue;
+      padding: 5px 5px;
+      border-radius: 5px;
+      text-align: center;
+      box-shadow: 0 5px 5px rgba(0,0,0,0.15);
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+    }
+    .card i {
+      font-size: 40px;
+      color: #1abc9c;
+      margin-bottom: 15px;
+    }
+    .card h3 {
+      margin: 0;
+      font-size: 20px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="homepage">
+    <div class="card" onclick="location.href='homepage.html'">
+      <i class="fa-solid fa-right-to-bracket"></i>
+      <h1>Get Started</h1>
+    </div>
+  </div>
+</body>
+</html>
+
+Dashboard
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: url('hhhh.jpg');
+      height: 100vh;
+    }
+    .homepage {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 30px;
+      width: 80%;
+      max-width: 900px;
+    }
+    .card {
+      background: lightblue;
+      padding: 30px 20px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+    }
+    .card i {
+      font-size: 40px;
+      color: #1abc9c;
+      margin-bottom: 15px;
+    }
+    .card h3 {
+      margin: 0;
+      font-size: 20px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="homepage">
+    <div class="card" onclick="location.href='file.html'">
+      <i class="fa-solid fa-right-to-bracket"></i>
+      <h3>Sign In</h3>
+    </div>
+    <div class="card" onclick="location.href='modified booking.html'">
+      <i class="fa-solid fa-ticket"></i>
+      <h3>Booking</h3>
+    </div>
+    <div class="card" onclick="location.href='tourist_placelist.html'">
+      <i class="fa-solid fa-landmark"></i>
+      <h3>Tourist Places</h3>
+    </div>
+  </div>
+</body>
+</html>
+
+
+signin
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sign In & Sign Up with ID Proof</title>
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image:url('wonders.jpg');
+    background-size: cover;
+  }
+  .container {
+    background: lightblue;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    width: 350px;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color:lightseagreen;
+    color: white;
+    transition: background 0.3s;
+  }
+
+  button:hover {
+    background-color: green;
+  }
+
+  /* Removed social login styling */
+
+  /* Logos - optional if you want to add icons back */
+  .logo {
+    height: 20px;
+    width: 20px;
+  }
+
+  .form-section {
+    width: 100%;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="file"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+  }
+
+  /* Hidden class */
+  .hidden {
+    display: none;
+  }
+
+  /* Buttons at bottom of forms */
+  .bottom-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  /* Footer contact info */
+  .footer-info {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <!-- Sign In Section -->
+  <div id="signInSection" class="form-section">
+    <h2>Sign In</h2>
+    <!-- Removed social buttons -->
+    <!--
+    <div>
+      <button class="social-btn" id="googleSignIn">
+        <img src="https://upload.wikimedia.org/wiki/Google#/media/File:Google_%22G%22_logo.svg" class="logo" alt="Google Logo" />
+        Sign in with Google
+      </button>
+      <button class="social-btn" id="facebookSignIn">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" class="logo" alt="Facebook Logo" />
+        Sign in with Facebook
+      </button>
+    </div>
+    -->
+    <form id="signInForm">
+      <div class="form-group">
+        <label for="signin-username">Username</label>
+        <input type="text" id="signin-username" placeholder="Enter username" required />
+      </div>
+      <div class="form-group">
+        <label for="signin-password">Password</label>
+        <input type="password" id="signin-password" placeholder="Enter password" required />
+      </div>
+      <!-- Bottom buttons for Sign In / Sign Up -->
+      <div class="bottom-buttons">
+        <button type="button" id="toSignUp">Sign Up</button>
+        <button type="submit">Sign In</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Sign Up Section -->
+  <div id="signUpSection" class="form-section hidden">
+    <h2>Register</h2>
+    <form id="signUpForm">
+      <div class="form-group">
+        <label for="signup-username">Username</label>
+        <input type="text" id="signup-username" placeholder="Enter a username" required />
+      </div>
+      <div class="form-group">
+        <label for="signup-email">Email</label>
+        <input type="email" id="signup-email" placeholder="Enter your email" required />
+      </div>
+      <div class="form-group">
+        <label for="signup-phone">Phone Number (optional)</label>
+        <input type="tel" id="signup-phone" placeholder="Enter your phone number" />
+      </div>
+      <!-- Removed IP Proof -->
+      <div class="form-group">
+        <label for="signup-idproof">ID Proof (optional)</label>
+        <input type="file" id="signup-idproof" accept="image/*,application/pdf" />
+      </div>
+      <div class="form-group">
+        <label for="signup-password">Password</label>
+        <input type="password" id="signup-password" placeholder="Create a password" required />
+      </div>
+      <!-- Bottom buttons for Sign Up / Sign In -->
+      <div class="bottom-buttons">
+        <button type="button" id="toSignIn">Sign In</button>
+        <button type="submit">Register</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Contact Email Info -->
+  <div class="footer-info">
+    Contact us at: <strong>wanderwaybot@gmail.com</strong>
+  </div>
+</div>
+
+<script>
+  // Elements
+  const signInBtn = document.getElementById('toSignIn');
+  const signUpBtn = document.getElementById('toSignUp');
+
+  const signInSection = document.getElementById('signInSection');
+  const signUpSection = document.getElementById('signUpSection');
+
+  // Toggle functions
+  function showSignIn() {
+    signInSection.classList.remove('hidden');
+    signUpSection.classList.add('hidden');
+  }
+
+  function showSignUp() {
+    signUpSection.classList.remove('hidden');
+    signInSection.classList.add('hidden');
+  }
+
+  // Event listeners for bottom buttons
+  document.getElementById('toSignIn').addEventListener('click', showSignIn);
+  document.getElementById('toSignUp').addEventListener('click', showSignUp);
+
+  // Sign Up handler
+document.getElementById('signUpForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const username = document.getElementById('signup-username').value.trim();
+    const email = document.getElementById('signup-email').value.trim();
+    const phone = document.getElementById('signup-phone').value.trim();
+    const idProofFile = document.getElementById('signup-idproof').files[0]; // File object
+    const password = document.getElementById('signup-password').value;
+
+    // For demo, we'll store the filename or file info as string (real upload requires server)
+    let idProofInfo = '';
+    if (idProofFile) {
+      idProofInfo = idProofFile.name; // just filename for demo
+    }
+
+    const users = JSON.parse(localStorage.getItem('users') || '{}');
+
+    if (users[username]) {
+      alert('Username already exists. Choose another.');
+    } else {
+      users[username] = { email, phone, idProof: idProofInfo, password };
+      localStorage.setItem('users', JSON.stringify(users));
+      alert('Registration successful! You can now sign in.');
+      showSignIn();
+      document.getElementById('signUpForm').reset();
+    }
+  });
+
+  // Sign In handler
+document.getElementById('signInForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const username = document.getElementById('signin-username').value.trim();
+    const password = document.getElementById('signin-password').value;
+
+    const users = JSON.parse(localStorage.getItem('users') || '{}');
+
+    if (users[username]) {
+      if (users[username].password === password) {
+        alert('Welcome back, ' + username + '!\n' +
+              'ID Proof: ' + (users[username].idProof || 'N/A'));
+      } else {
+        alert('Incorrect password.');
+      }
+    } else {
+      alert('User not found. Please register.');
+    }
+  });
+
+  // No social login handlers needed anymore
+</script>
+</body>
+</html>
+
+
+booking
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Tourist Ticket Booking - India</title>
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-image: url('beach.jpg');
+    background-size: cover;
+  }
+  h1 { text-align: center; margin-bottom: 20px; }
+  .container { max-width: 900px; margin: auto; }
+  .search-section { text-align: center; margin-bottom: 20px; }
+  #search-input {
+    width: 60%; padding: 10px; font-size: 16px;
+    border-radius: 8px; border: 1px solid lightgoldenrodyellow;
+  }
+  .places-list { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; }
+  .place-card {
+    background: #fff; padding: 15px; border-radius: 10px;
+    width: 200px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    cursor: pointer; transition: transform 0.2s;
+  }
+  .place-card:hover { transform: translateY(-5px); }
+  .place-image { width: 100%; height: 150px; object-fit: cover; border-radius: 8px; }
+  .modal {
+    display: none; position: fixed; z-index: 999; left: 0; top: 0;
+    width: 100%; height: 100%; background-color: rgba(0,0,0,0.4);
+  }
+
+  /* Scrollable booking modal */
+  .modal-content {
+    background-color: lightblue;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+    max-height: 80vh; /* limit height */
+    overflow-y: auto; /* enable scroll */
+  }
+  .modal-content::-webkit-scrollbar {
+    width: 8px;
+  }
+  .modal-content::-webkit-scrollbar-thumb {
+    background: #3498db;
+    border-radius: 8px;
+  }
+
+  .close-btn { position: absolute; right: 15px; top: 10px; font-size: 24px; cursor: pointer; }
+  .time-slots { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 15px; }
+  .time-slot { background: #eee; padding: 10px 15px; border-radius: 8px; cursor: pointer; }
+  .time-slot.selected { background: #3498db; color: #fff; }
+  .ticket-quantity { display: flex; justify-content: space-around; margin-bottom: 15px; }
+  .booking-summary { text-align: center; margin-bottom: 15px; }
+
+  #summary-details {
+    background: #fafafa;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+    max-height: 150px;
+    overflow-y: auto;
+  }
+  #summary-details::-webkit-scrollbar { width: 8px; }
+  #summary-details::-webkit-scrollbar-thumb { background: #3498db; border-radius: 8px; }
+
+  button {
+    background: #3498db; color: #fff; border: none;
+    padding: 12px 20px; border-radius: 8px; cursor: pointer; font-size: 16px;
+  }
+  button:hover { background: #2980b9; }
+
+  #ticketBillModal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+  }
+  #ticketBillContent {
+    background: blanchedalmond;
+    border-radius: 10px;
+    width: 80%; max-width: 600px;
+    margin: 5% auto;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+  }
+  #ticketBillContent::-webkit-scrollbar { width: 10px; }
+  #ticketBillContent::-webkit-scrollbar-thumb { background: #3498db; border-radius: 8px; }
+
+  #ticketBillContent .close-btn {
+    position: absolute; right: 15px; top: 10px;
+    font-size: 22px; cursor: pointer; color: #333;
+  }
+  #ticketBillContent button { margin-top: 10px; margin-right: 10px; }
+
+  .booking-input {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .booking-input label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  .booking-input input[type="text"],
+  .booking-input input[type="file"] {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #aaa;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Tourist Place Ticket Booking - India</h1>
+
+  <div class="search-section">
+    <input type="text" id="search-input" placeholder="Search for places..." />
+  </div>
+
+  <div id="places-list" class="places-list"></div>
+
+  <!-- Booking Modal -->
+  <div id="booking-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" id="closeBooking">&times;</span>
+      <h2 id="place-name"></h2>
+
+      <div class="booking-input">
+        <label for="visitor-name">Booking Person Name:</label>
+        <input type="text" id="visitor-name" placeholder="Enter your full name" required />
+      </div>
+      <div class="booking-input">
+        <label for="id-proof">Attach ID Proof (PDF/Image):</label>
+        <input type="file" id="id-proof" accept=".pdf,.jpg,.jpeg,.png" required />
+      </div>
+
+      <div id="time-slots" class="time-slots"></div>
+      <br/>
+      <div>Date of Visit:</div>
+      <input type="date" id="date" required><br/><br/>
+      <div class="ticket-quantity">
+        <label>Adults:</label>
+        <input type="number" id="adults" min="1" value="1" />
+        <label>Children:</label>
+        <input type="number" id="children" min="0" value="0" />
+      </div>
+      
+      <div class="booking-summary">
+        <button id="show-summary">Show Summary</button>
+        <div id="summary-details"></div>
+      </div>
+      <button id="proceed-payment">Proceed to Payment</button>
+    </div>
+  </div>
+</div>
+
+<!-- Payment PIN Modal -->
+<div id="pin-modal" class="modal">
+  <div class="modal-content pin-content">
+    <h3>Enter PIN for Payment</h3>
+    <input type="password" id="pin-input" maxlength="4" />
+    <button id="pay-now">Pay Now</button>
+    <button id="cancel-pin">Cancel</button>
+  </div>
+</div>
+
+<!-- Ticket & Bill Popup -->
+<div id="ticketBillModal">
+  <div id="ticketBillContent">
+    <span class="close-btn" id="closeTicketBill">&times;</span>
+    <h2>🎟️ Ticket & Bill Details</h2>
+    <div id="billDetails"></div>
+    <div id="ticketDetails"></div>
+    <button onclick="printTicket()">🖨️ Print Ticket</button>
+    <button onclick="downloadTicket()">⬇️ Download Ticket</button>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+const { jsPDF } = window.jspdf;
+
+const places = [
+  { name: "Taj Mahal", description: "Symbol of love in Agra.", defaultImage: "https://upload.wikimedia.org/wikipedia/commons/d/da/Taj-Mahal.jpg", ticketPrice: { adult: 250, child: 100 }, slots: ["9AM-11AM","11AM-1PM","2PM-4PM"] },
+  { name: "Gateway of India", description: "Historic arch monument in Mumbai.", defaultImage: "https://upload.wikimedia.org/wikipedia/commons/f/fb/Gateway_of_India%2C_Mumbai.jpg", ticketPrice: { adult: 200, child: 80 }, slots: ["8AM-10AM","10AM-12PM","3PM-5PM"] },
+];
+
+let filteredPlaces = [{
+    name: "Taj Mahal",
+    description: "Iconic white marble mausoleum in Agra",
+    defaultImage: "tajmahal1.jpg",
+    hoverImage: "tajmahal1.jpg",
+    slots: ["9:00 AM", "11:00 AM", "1:00 PM", "3:00 PM"],
+    ticketPrice: { adult: 1300, child: 70 }
+  },
+  {
+    name: "Amber Fort",
+    description: "Majestic hilltop fort with intricate architecture in Jaipur, Rajasthan",
+    defaultImage: "amber_fort.jpg",
+    hoverImage: "amber_fort.jpg",
+    slots: ["9:00 AM", "11:00 AM", "1:00 PM", "3:00 PM"],
+    ticketPrice: { adult: 500, child: 200 }
+  },
+  {
+    name: "Jaisalmer Fort",
+    description: "Golden sandstone fort offering panoramic desert views in Rajasthan",
+    defaultImage: "jaisalmer_fort.jpg",
+    hoverImage: "jaisalmer_fort.jpg",
+    slots: ["10:00 AM", "12:00 PM", "2:00 PM"],
+    ticketPrice: { adult: 600, child: 300 }
+  },
+  {
+    name: "Hawa Mahal",
+    description: "Palace of winds with honeycomb facade in Jaipur, Rajasthan",
+    defaultImage: "hawa_mahal.jpg",
+    hoverImage: "hawa_mahal.jpg",
+    slots: ["9:00 AM", "11:00 AM"],
+    ticketPrice: { adult: 50, child: 25 }
+  },
+  {
+    name: "Khajuraho Temples",
+    description: "UNESCO World Heritage Site famous for their stunning erotic sculptures in Madhya Pradesh",
+    defaultImage: "khajuraho_temples.jpg",
+    hoverImage: "khajuraho_temples.jpg",
+    slots: ["8:00 AM", "10:00 AM", "12:00 PM"],
+    ticketPrice: { adult: 600, child: 300 }
+  },
+  {
+    name: "Sundarbans Mangrove Forest",
+    description: "Largest mangrove forest in the world in West Bengal, home to Royal Bengal tigers",
+    defaultImage: "sundarbans.jpg",
+    hoverImage: "sundarbans.jpg",
+    slots: ["6:00 AM", "8:00 AM", "10:00 AM"],
+    ticketPrice: { adult: 800, child: 400 }
+  },
+  {
+    name: "Darjeeling Tea Gardens",
+    description: "Famous tea estates with scenic views of the Himalayas in West Bengal",
+    defaultImage: "darjeeling_tea.jpg",
+    hoverImage: "darjeeling_tea.jpg",
+    slots: ["8:00 AM", "10:00 AM"],
+    ticketPrice: { free: true }
+  },
+  {
+    name: "Mount Abu",
+    description: "Hill station with Dilwara Jain Temples and panoramic views in Rajasthan",
+    defaultImage: "mount_abu.jpg",
+    hoverImage: "mount_abu.jpg",
+    slots: ["7:00 AM", "9:00 AM"],
+    ticketPrice: { adult: 200, child: 100 }
+  },
+  {
+    name: "Chittorgarh Fort",
+    description: "Historic fort complex symbolizing Rajput valor in Rajasthan",
+    defaultImage: "chittorgarh_fort.jpg",
+    hoverImage: "chittorgarh_fort.jpg",
+    slots: ["9:00 AM", "11:00 AM"],
+    ticketPrice: { Indian: 50, Foreigner: 200 }
+  },
+  {
+    name: "Kaziranga National Park",
+    description: "UNESCO World Heritage Site famous for one-horned rhinoceroses in Assam",
+    defaultImage: "kaziranga_park.jpg",
+    hoverImage: "kaziranga_park.jpg",
+    slots: ["6:00 AM", "8:00 AM"],
+    ticketPrice: { Indian: 250, Foreigner: 1000 }
+  },
+  {
+    name: "Ranthambore National Park",
+    description: "Popular tiger reserve in Rajasthan with historic ruins",
+    defaultImage: "rathambore_park.jpg",
+    hoverImage: "rathambore_park.jpg",
+    slots: ["6:00 AM", "10:00 AM"],
+    ticketPrice: { Indian: 50, Foreigner: 450 }
+  },
+  {
+    name: "Srinagar Dal Lake",
+    description: "Iconic lake with houseboats and shikaras in Kashmir",
+    defaultImage: "dal_lake.jpg",
+    hoverImage: "dal_lake.jpg",
+    slots: ["8:00 AM", "10:00 AM"],
+    ticketPrice: { boatRide: 300 }
+  },
+  {
+    name: "Ajanta Caves",
+    description: "Ancient Buddhist rock-cut caves and paintings in Maharashtra",
+    defaultImage: "ajanta_caves.jpg",
+    hoverImage: "ajanta_caves.jpg",
+    slots: ["9:00 AM", "11:00 AM"],
+    ticketPrice: { Indian: 40, Foreigner: 600 }
+  },
+  {
+    name: "Ellora Caves",
+    description: "UNESCO site with rock-cut temples and monasteries in Maharashtra",
+    defaultImage: "ellora_caves.jpg",
+    hoverImage: "ellora_caves.jpg",
+    slots: ["9:00 AM", "11:00 AM"],
+    ticketPrice: { Indian: 40, Foreigner: 600 }
+  },
+  {
+    name: "Munnar Tea Gardens",
+    description: "Expansive tea plantations in Kerala amid mountains",
+    defaultImage: "munnar_tea.jpg",
+    hoverImage: "munnar_tea.jpg",
+    slots: ["8:00 AM", "10:00 AM"],
+    ticketPrice: { free: true }
+  },
+  {
+    name: "Spiti Valley",
+    description: "High-altitude desert mountain valley in Himachal Pradesh",
+    defaultImage: "spiti_valley.jpg",
+    hoverImage: "spiti_valley.jpg",
+    slots: ["6:00 AM", "8:00 AM"],
+    ticketPrice: { info: "Variable (tour packages vary)" }
+  },
+  {
+    name: "Rishikesh",
+    description: "Yoga capital of the world with river rafting in Uttarakhand",
+    defaultImage: "rishikesh.jpg",
+    hoverImage: "rishikesh.jpg",
+    slots: ["7:00 AM", "9:00 AM"],
+    ticketPrice: { info: "₹500-₹2000 (activities)" }
+  },
+  {
+    name: "Kedarnath Temple",
+    description: "Ancient Hindu temple in the Himalayas, pilgrimage site in Uttarakhand",
+    defaultImage: "kedarnath_temples.jpg",
+    hoverImage: "kedarnath_temples.jpg",
+    slots: ["Open during pilgrimage season"],
+    ticketPrice: { info: "Free, transport and accommodation costs vary" }
+  },
+  {
+    name: "Leh Palace",
+    description: "Historical palace with panoramic views of Leh in Ladakh",
+    defaultImage: "leh_palace.jpg",
+    hoverImage: "leh_palace.jpg",
+    slots: ["9:00 AM", "11:00 AM"],
+    ticketPrice: { Indian: 200, Foreigner: 500 }
+  },
+  {
+    name: "Nainital Lake",
+    description: "Scenic lake surrounded by mountains in Uttarakhand",
+    defaultImage: "nainital_lake.jpg",
+    hoverImage: "nainital_lake.jpg",
+    slots: ["8:00 AM", "10:00 AM"],
+    ticketPrice: { boat: 200 }
+  },
+  {
+    name: "Meenakshi Amman Temple",
+    description: "Ancient temple dedicated to Goddess Meenakshi in Madurai, Tamil Nadu",
+    defaultImage: "meenakshi_temple.jpg",
+    hoverImage: "meenakshi_temple.jpg",
+    slots: ["6:00 AM - 12:00 PM", "4:00 PM - 9:00 PM"],
+    ticketPrice: { "adult": 50, "child": 20 }
+  },
+  {
+    name: "Mysore Palace",
+    description: "Historic royal palace in Mysore, Karnataka",
+    defaultImage: "mysore_palace.jpg",
+    hoverImage: "mysore_palace.jpg",
+    slots: ["10:00 AM - 5:30 PM"],
+    ticketPrice: { "adult": 70, "child": 30 }
+  },
+  {
+    name: "Vivekananda Rock Memorial",
+    description: "Spiritual monument on a small island in Kanyakumari, Tamil Nadu",
+    defaultImage: "vivekananda_rock.jpg",
+    hoverImage: "vivekananda_rock.jpg",
+    slots: ["8:00 AM - 4:00 PM"],
+    ticketPrice: { "adult": 25, "child": 10 }
+  },
+  {
+    name: "Hampi Ruins",
+    description: "Ancient UNESCO World Heritage Site with ruins of Vijayanagara Empire, Karnataka",
+    defaultImage: "hampi_ruins.jpg",
+    hoverImage: "hampi_ruins.jpg",
+    slots: ["6:00 AM - 6:00 PM"],
+    ticketPrice: { "adult": 40, "child": 20 }
+  },
+  {
+    name: "Kadri Manjunath Temple",
+    description: "Historic Hindu temple located in Mangalore, Karnataka",
+    defaultImage: "kadri_temple.jpg",
+    hoverImage: "kadri_temple.jpg",
+    slots: ["5:00 AM - 9:00 PM"],
+    ticketPrice: { "adult": 0, "child": 0 }
+  },
+  {
+    name: "Athirappilly Waterfalls",
+    description: "Scenic waterfalls in Kerala, popular for sightseeing and trekking",
+    defaultImage: "athirappilly_waterfalls.jpg",
+    hoverImage: "athirappilly_waterfalls.jpg",
+    slots: ["Open 24 hours"],
+    ticketPrice: { "adult": 10, "child": 5 }
+  },
+  {
+    name: "Backwaters of Kumarakom",
+    description: "Beautiful backwater village in Kerala, famous for houseboat cruises",
+    defaultImage: "kumarakom_backwaters.jpg",
+    hoverImage: "kumarakom_backwaters.jpg",
+    slots: ["Flexible"],
+    ticketPrice: { "boat": 50 }
+  },
+  {
+    name: "Brindavan Gardens",
+    description: "Terraced gardens with musical fountains in Mysore, Karnataka",
+    defaultImage: "brindavan_gardens.jpg",
+    hoverImage: "brindavan_gardens.jpg",
+    slots: ["6:00 AM - 9:00 PM"],
+    ticketPrice: { "adult": 20, "child": 10 }
+  },
+  {
+    name: "Kodaikanal Lake",
+    description: "Artificial lake in Kodaikanal, Tamil Nadu, ideal for boating",
+    defaultImage: "kodaikanal_lake.jpg",
+    hoverImage: "kodaikanal_lake.jpg",
+    slots: ["Open 24 hours"],
+    ticketPrice: { "boat": 50 }
+  },
+  {
+    name: "Yercaud Lake",
+    description: "Serene lake in Yercaud, Tamil Nadu, perfect for boating and leisure",
+    defaultImage: "yercaud_lake.jpg",
+    hoverImage: "yercaud_lake.jpg",
+    slots: ["Open 24 hours"],
+    ticketPrice: { "adult": 40, "child": 40 }
+  },
+  {
+    name: "Ramanagara Rock Climbing",
+    description: "Popular rock climbing and trekking destination in Ramanagara, Karnataka",
+    defaultImage: "ramanagara_rock_climbing.jpg",
+    hoverImage: "ramanagara_rock_climbing.jpg",
+    slots: ["6:00 AM - 6:00 PM"],
+    ticketPrice: { "child": 100, "adult": 500 }
+  },
+  {
+    name: "Chennai Marina Beach",
+    description: "Famous urban beach in Chennai, Tamil Nadu",
+    defaultImage: "marina_beach.jpg",
+    hoverImage: "marina_beach.jpg",
+    slots: ["Open 24 hours"],
+    ticketPrice: { "free": true }
+  },
+  {
+    name: "Bandipur National Park",
+    description: "Wildlife sanctuary with rich flora and fauna in Karnataka",
+    defaultImage: "bandipur_park.jpg",
+    hoverImage: "bandipur_park.jpg",
+    slots: ["6:30 AM - 9:30 AM", "3:00 PM - 6:00 PM"],
+    ticketPrice: { "adult": 150, "child": 75 }
+  },
+  {
+    name: "Wayanad Wildlife Sanctuary",
+    description: "Protected wildlife sanctuary in Kerala known for elephants and other animals",
+    defaultImage: "wayanad_sanctuary.jpg",
+    hoverImage: "wayanad_sanctuary.jpg",
+    slots: ["6:00 AM - 6:00 PM"],
+    ticketPrice: { "adult": 50, "child": 25 }
+  },
+  {
+    name: "Ooty Botanical Gardens",
+    description: "Expansive gardens with diverse plant species in Ooty, Tamil Nadu",
+    defaultImage: "ooty_botanical_gardens.jpg",
+    hoverImage: "ooty_botanical_gardens.jpg",
+    slots: ["9:00 AM - 5:00 PM"],
+    ticketPrice: { "adult": 20, "child": 10 }
+  },
+  {
+    name: "Pookode Lake",
+    description: "Scenic freshwater lake in Wayanad, Kerala, ideal for boating",
+    defaultImage: "pookode_lake.jpg",
+    hoverImage: "pookode_lake.jpg",
+    slots: ["8:00 AM - 6:00 PM"],
+    ticketPrice: { "boat": 50 }
+  },
+  {
+    name: "Kanchipuram Temples",
+    description: "Famous group of Hindu temples in Kanchipuram, Tamil Nadu",
+    defaultImage: "kanchipuram_temples.jpg",
+    hoverImage: "kanchipuram_temples.jpg",
+    slots: ["6:00 AM - 9:00 PM"],
+    ticketPrice: { "free": true }
+  },
+  {
+    name: "Silent Valley National Park",
+    description: "Primeval rainforest in Kerala, rich in biodiversity",
+    defaultImage: "silent_valley.jpg",
+    hoverImage: "silent_valley.jpg",
+    slots: ["6:00 AM - 6:00 PM"],
+    ticketPrice: { "adult": 100, "child": 50 }
+  },
+  {
+    name: "Mahabalipuram Shore Temple",
+    description: "Ancient rock-cut temples on the coast of Tamil Nadu",
+    defaultImage: "mahabalipuram_shore_temple.jpg",
+    hoverImage: "mahabalipuram_shore_temple.jpg",
+    slots: ["6:00 AM - 6:00 PM"],
+    ticketPrice: { "adult": 40, "child": 20 }
+  }];
+let selectedPlace = null;
+let selectedSlot = null;
+let currentBooking = {};
+
+const placesListDiv = document.getElementById('places-list');
+const searchInput = document.getElementById('search-input');
+const bookingModal = document.getElementById('booking-modal');
+const closeBookingBtn = document.getElementById('closeBooking');
+const placeNameHeading = document.getElementById('place-name');
+const timeSlotsDiv = document.getElementById('time-slots');
+const dateInput = document.getElementById('date');
+const adultsInput = document.getElementById('adults');
+const childrenInput = document.getElementById('children');
+const showSummaryBtn = document.getElementById('show-summary');
+const summaryDetailsDiv = document.getElementById('summary-details');
+const proceedBtn = document.getElementById('proceed-payment');
+const pinModal = document.getElementById('pin-modal');
+const pinInput = document.getElementById('pin-input');
+const payNowBtn = document.getElementById('pay-now');
+const cancelPinBtn = document.getElementById('cancel-pin');
+const ticketBillModal = document.getElementById('ticketBillModal');
+const closeTicketBill = document.getElementById('closeTicketBill');
+const visitorNameInput = document.getElementById('visitor-name');
+const idProofInput = document.getElementById('id-proof');
+
+function renderPlaces() {
+  placesListDiv.innerHTML = '';
+  filteredPlaces.forEach(place => {
+    const card = document.createElement('div');
+    card.className = 'place-card';
+    card.innerHTML = `<img src="${place.defaultImage}" class="place-image"/>
+                      <h3>${place.name}</h3>
+                      <p>${place.description}</p>`;
+    card.onclick = () => openBooking(place);
+    placesListDiv.appendChild(card);
+  });
+}
+renderPlaces();
+
+searchInput.addEventListener('input', () => {
+  const query = searchInput.value.toLowerCase();
+  filteredPlaces = places.filter(p => p.name.toLowerCase().includes(query));
+  renderPlaces();
+});
+
+function openBooking(place) {
+  selectedPlace = place;
+  placeNameHeading.textContent = place.name;
+  selectedSlot = null;
+  timeSlotsDiv.innerHTML = '';
+  adultsInput.value = 1; childrenInput.value = 0;
+  summaryDetailsDiv.innerHTML = '';
+  currentBooking = {};
+  visitorNameInput.value = "";
+  idProofInput.value = "";
+  place.slots.forEach(slot => {
+    const slotDiv = document.createElement('div');
+    slotDiv.className = 'time-slot';
+    slotDiv.innerText = slot;
+    slotDiv.onclick = () => {
+      document.querySelectorAll('.time-slot').forEach(s => s.classList.remove('selected'));
+      slotDiv.classList.add('selected');
+      selectedSlot = slot;
+    };
+    timeSlotsDiv.appendChild(slotDiv);
+  });
+  bookingModal.style.display = 'block';
+}
+closeBookingBtn.onclick = () => bookingModal.style.display = 'none';
+
+showSummaryBtn.onclick = () => {
+  const visitDate = dateInput.value;
+  const adults = parseInt(adultsInput.value);
+  const children = parseInt(childrenInput.value);
+  const visitorName = visitorNameInput.value.trim();
+  if (!visitorName) { alert("Please enter your name."); return; }
+  if (!idProofInput.files.length) { alert("Please attach your ID proof."); return; }
+  if (!selectedSlot) { alert("Please select a time slot"); return; }
+  if (!visitDate) { alert("Please select a visit date"); return; }
+  const price = selectedPlace.ticketPrice;
+  const totalCost = (adults * (price.adult||0)) + (children * (price.child||0));
+  currentBooking = { place: selectedPlace.name, time: selectedSlot, visitDate, adults, children, totalCost, visitorName, idFileName: idProofInput.files[0].name };
+  summaryDetailsDiv.innerHTML = `
+    <p><strong>Name:</strong> ${visitorName}</p>
+    <p><strong>ID Proof:</strong> ${idProofInput.files[0].name}</p>
+    <p><strong>Place:</strong> ${currentBooking.place}</p>
+    <p><strong>Date of Visit:</strong> ${currentBooking.visitDate}</p>
+    <p><strong>Time Slot:</strong> ${currentBooking.time}</p>
+    <p><strong>Adults:</strong> ${adults}</p>
+    <p><strong>Children:</strong> ${children}</p>
+    <p><strong>Total Cost:</strong> ₹${totalCost}</p>`;
+};
+
+proceedBtn.onclick = () => {
+  if (!currentBooking.place) { alert("Please complete booking details"); return; }
+  pinInput.value = ''; pinModal.style.display = 'block';
+};
+cancelPinBtn.onclick = () => pinModal.style.display = 'none';
+payNowBtn.onclick = () => {
+  if (pinInput.value.length !== 4 || isNaN(pinInput.value)) {
+    alert("Enter a valid 4-digit PIN");
+    return;
+  }
+
+  pinModal.style.display = 'none';
+  alert("💳 Payment Successful!");
+  setTimeout(() => generateTicket(), 400);
+};
+
+function generateTicket() {
+  const date = new Date().toLocaleString();
+  document.getElementById('billDetails').innerHTML = `
+    <h3>Bill Details</h3>
+    <p><strong>Name:</strong> ${currentBooking.visitorName}</p>
+    <p><strong>ID Proof:</strong> ${currentBooking.idFileName}</p>
+    <p><strong>Booking Date:</strong> ${date}</p>
+    <p><strong>Visit Date:</strong> ${currentBooking.visitDate}</p>
+    <p><strong>Place:</strong> ${currentBooking.place}</p>
+    <p><strong>Time Slot:</strong> ${currentBooking.time}</p>
+    <p><strong>Adults:</strong> ${currentBooking.adults}</p>
+    <p><strong>Children:</strong> ${currentBooking.children}</p>
+    <p><strong>Total Paid:</strong> ₹${currentBooking.totalCost}</p>
+    <p><strong>Payment Status:</strong> ✅ Successful</p>`;
+  document.getElementById('ticketDetails').innerHTML = `
+    <h3>Ticket Details</h3>
+    <p>✅ Entry for <b>${currentBooking.place}</b></p>
+    <p>Visitor: ${currentBooking.visitorName}</p>
+    <p>Visit Date: ${currentBooking.visitDate}</p>
+    <p>Time: ${currentBooking.time}</p>
+    <p>Adults: ${currentBooking.adults}, Children: ${currentBooking.children}</p>
+    <p>Total Paid: ₹${currentBooking.totalCost}</p>`;
+  ticketBillModal.style.display = 'block';
+}
+closeTicketBill.onclick = () => ticketBillModal.style.display = 'none';
+
+function downloadTicket() {
+  const doc = new jsPDF();
+  doc.setFontSize(14);
+  doc.text("Tourist Ticket & Bill", 20, 20);
+  doc.setFontSize(12);
+  let y = 40;
+  doc.text(`Name: ${currentBooking.visitorName}`, 20, y); y+=10;
+  doc.text(`ID Proof: ${currentBooking.idFileName}`, 20, y); y+=10;
+  doc.text(`Booking Date: ${new Date().toLocaleString()}`, 20, y); y+=10;
+  doc.text(`Visit Date: ${currentBooking.visitDate}`, 20, y); y+=10;
+  doc.text(`Place: ${currentBooking.place}`, 20, y); y+=10;
+  doc.text(`Time Slot: ${currentBooking.time}`, 20, y); y+=10;
+  doc.text(`Adults: ${currentBooking.adults}`, 20, y); y+=10;
+  doc.text(`Children: ${currentBooking.children}`, 20, y); y+=10;
+  doc.text(`Total Paid: ₹${currentBooking.totalCost}`, 20, y); y+=10;
+  doc.text(`Payment Status: Successful ✅`, 20, y);
+  doc.save(`Ticket_${currentBooking.place.replace(/\s+/g, "_")}.pdf`);
+}
+
+function printTicket() {
+  const content = document.getElementById('ticketBillContent').innerHTML;
+  const w = window.open('', '', 'width=800,height=600');
+  w.document.write(`<html><head><title>Tourist Ticket</title></head><body>${content}</body></html>`);
+  w.document.close(); w.print();
+}
+
+window.onclick = e => {
+  if (e.target == bookingModal) bookingModal.style.display='none';
+  if (e.target == pinModal) pinModal.style.display='none';
+  if (e.target == ticketBillModal) ticketBillModal.style.display='none';
+};
+</script>
+</body>
+</html>
+
+
+feedback
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback & Rating | Ticket Booking System</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #007bff, #00d4ff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .feedback-container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 20px;
+      width: 400px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      animation: fadeIn 0.6s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    .stars {
+      display: flex;
+      justify-content: center;
+      margin: 15px 0;
+    }
+
+    .star {
+      font-size: 30px;
+      color: #ccc;
+      cursor: pointer;
+      transition: color 0.2s ease;
+    }
+
+    .star.active {
+      color: #fbc02d;
+      transform: scale(1.2);
+    }
+
+    textarea {
+      width: 100%;
+      height: 100px;
+      margin: 15px 0;
+      padding: 10px;
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      resize: none;
+      font-size: 14px;
+      outline: none;
+      transition: border 0.3s;
+    }
+
+    textarea:focus {
+      border-color: #007bff;
+    }
+
+    button {
+      background: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+
+    .message {
+      margin-top: 15px;
+      font-weight: 500;
+      color: green;
+      display: none;
+      animation: fadeIn 0.5s ease;
+    }
+  </style>
+</head>
+<body>
+  <div class="feedback-container">
+    <h2>Rate Your Booking Experience</h2>
+
+    <div class="stars">
+      <span class="star" data-value="1">★</span>
+      <span class="star" data-value="2">★</span>
+      <span class="star" data-value="3">★</span>
+      <span class="star" data-value="4">★</span>
+      <span class="star" data-value="5">★</span>
+    </div>
+
+    <textarea id="feedback" placeholder="Share your feedback..."></textarea>
+    <button id="submitBtn">Submit Feedback</button>
+
+    <div class="message" id="msg">Thank you for your valuable feedback! 🌟</div>
+  </div>
+
+  <script>
+    const stars = document.querySelectorAll('.star');
+    const feedback = document.getElementById('feedback');
+    const submitBtn = document.getElementById('submitBtn');
+    const msg = document.getElementById('msg');
+    let rating = 0;
+
+    // Highlight stars on click
+    stars.forEach(star => {
+      star.addEventListener('click', () => {
+        rating = star.getAttribute('data-value');
+        stars.forEach(s => s.classList.remove('active'));
+        for (let i = 0; i < rating; i++) {
+          stars[i].classList.add('active');
+        }
+      });
+    });
+
+    // Submit feedback
+    submitBtn.addEventListener('click', () => {
+      const feedbackText = feedback.value.trim();
+      if (rating === 0) {
+        alert('Please select a rating!');
+        return;
+      }
+      if (feedbackText === '') {
+        alert('Please enter your feedback!');
+        return;
+      }
+
+      // Simulate sending data to server
+      console.log({
+        rating: rating,
+        feedback: feedbackText
+      });
+
+      msg.style.display = 'block';
+      feedback.value = '';
+      stars.forEach(s => s.classList.remove('active'));
+      rating = 0;
+
+      setTimeout(() => msg.style.display = 'none', 3000);
+    });
+  </script>
+</body>
+</html>
+
