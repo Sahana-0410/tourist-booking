@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tourist Place Booking</title>
+  <title>🏝️ Tourist Place Booking System</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -12,7 +12,6 @@
       padding: 0;
       overflow-x: hidden;
     }
-
     header {
       background: #0288d1;
       color: white;
@@ -25,14 +24,12 @@
       top: 0;
       z-index: 10;
     }
-
     .grid-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 25px;
       padding: 20px;
     }
-
     .place-card {
       background: #ffffff;
       border-radius: 15px;
@@ -40,33 +37,27 @@
       overflow: hidden;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-
     .place-card:hover {
       transform: scale(1.05);
       box-shadow: 0 4px 20px rgba(0,0,0,0.2);
     }
-
     .place-card img {
       width: 100%;
       height: 180px;
       object-fit: cover;
     }
-
     .place-info {
       padding: 15px;
     }
-
     .place-info h3 {
       margin: 0;
       font-size: 20px;
       color: #00796b;
     }
-
     .place-info p {
       margin: 6px 0;
       color: #555;
     }
-
     .place-info button {
       margin-top: 10px;
       background: #00796b;
@@ -77,12 +68,9 @@
       cursor: pointer;
       transition: background 0.3s ease;
     }
-
     .place-info button:hover {
       background: #004d40;
     }
-
-    /* Modal box */
     #bookingModal {
       display: none;
       position: fixed;
@@ -94,11 +82,7 @@
       justify-content: center;
       animation: fadeIn 0.3s ease;
     }
-
-    @keyframes fadeIn {
-      from { opacity: 0; } to { opacity: 1; }
-    }
-
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     .modal-content {
       background: #ffffff;
       padding: 20px;
@@ -109,16 +93,8 @@
       box-shadow: 0 5px 15px rgba(0,0,0,0.3);
       animation: slideUp 0.4s ease;
     }
-
-    @keyframes slideUp {
-      from { transform: translateY(30px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-
-    .modal-content h3 {
-      color: #00796b;
-    }
-
+    @keyframes slideUp { from { transform: translateY(30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+    .modal-content h3 { color: #00796b; }
     .modal-content input {
       margin: 10px 0;
       width: 80%;
@@ -126,7 +102,6 @@
       border: 1px solid #ccc;
       border-radius: 6px;
     }
-
     .modal-content button {
       background: #0288d1;
       color: white;
@@ -136,11 +111,7 @@
       cursor: pointer;
       margin-top: 10px;
     }
-
-    .modal-content button:hover {
-      background: #01579b;
-    }
-
+    .modal-content button:hover { background: #01579b; }
     footer {
       text-align: center;
       background: #0288d1;
@@ -152,7 +123,6 @@
 </head>
 <body>
   <header>🏝️ Tourist Place Booking System</header>
-
   <div id="placesContainer" class="grid-container"></div>
 
   <!-- Booking Modal -->
@@ -174,28 +144,39 @@
     let selectedPlace = null;
     let selectedPrice = 0;
 
-    // Load places from JSON
+    // ✅ Load JSON safely
     fetch("places.json")
-      .then(response => response.json())
+      .then(res => res.json())
       .then(data => {
         const container = document.getElementById("placesContainer");
-        data.forEach(place => {
+        container.innerHTML = "";
+
+        data.forEach(p => {
+          const name = p.name || p.Place_Name || p.place_name || "Unknown Place";
+          const location = p.location || p.State || p.City || "Unknown Location";
+          const price = p.price || p.Entry_Fee || p.ticket_price || 0;
+          const image = p.image_url || p.Image || "https://via.placeholder.com/250x160?text=Tourist+Place";
+
           const card = document.createElement("div");
           card.className = "place-card";
           card.innerHTML = `
-            <img src="${place.image_url}" alt="${place.place_name}">
+            <img src="${image}" alt="${name}">
             <div class="place-info">
-              <h3>${place.place_name}</h3>
-              <p><b>Location:</b> ${place.location}</p>
-              <p><b>Price:</b> ₹${place.ticket_price}</p>
-              <button onclick="openModal('${place.place_name}', ${place.ticket_price})">Book Now</button>
+              <h3>${name}</h3>
+              <p><b>Location:</b> ${location}</p>
+              <p><b>Price:</b> ₹${price}</p>
+              <button onclick="openModal('${name}', ${price})">Book Now</button>
             </div>
           `;
           container.appendChild(card);
         });
+      })
+      .catch(err => {
+        console.error("Error loading JSON:", err);
+        document.getElementById("placesContainer").textContent = "⚠️ Error loading places.json";
       });
 
-    // Open modal
+    // Modal logic
     function openModal(name, price) {
       selectedPlace = name;
       selectedPrice = price;
@@ -204,31 +185,17 @@
       document.getElementById("totalPrice").innerText = price;
       document.getElementById("bookingModal").style.display = "flex";
     }
-
-    // Close modal
-    function closeModal() {
-      document.getElementById("bookingModal").style.display = "none";
-    }
-
-    // Update total when ticket count changes
+    function closeModal() { document.getElementById("bookingModal").style.display = "none"; }
     document.getElementById("ticketCount").addEventListener("input", function() {
       const count = this.value || 0;
       document.getElementById("totalPrice").innerText = selectedPrice * count;
     });
-
-    // Confirm booking
     document.getElementById("confirmBooking").addEventListener("click", function() {
       const count = document.getElementById("ticketCount").value;
       const total = document.getElementById("totalPrice").innerText;
       const pin = document.getElementById("pin").value;
-      if (!count || count <= 0) {
-        alert("Please enter number of tickets.");
-        return;
-      }
-      if (!pin) {
-        alert("Please enter payment PIN.");
-        return;
-      }
+      if (!count || count <= 0) return alert("Please enter number of tickets.");
+      if (!pin) return alert("Please enter payment PIN.");
 
       const message = `Booking Confirmed!\n\nPlace: ${selectedPlace}\nTickets: ${count}\nTotal: ₹${total}`;
       alert(message);
@@ -236,7 +203,6 @@
       closeModal();
     });
 
-    // Voice output
     function speakMessage(text) {
       const speech = new SpeechSynthesisUtterance(text);
       speech.lang = "en-IN";
