@@ -141,73 +141,81 @@
   <footer>© 2025 Wanderway — Wherever you go, go with all your heart ❤️</footer>
 
   <script>
-    let selectedPlace = null;
-    let selectedPrice = 0;
+  let selectedPlace = null;
+  let selectedPrice = 0;
 
-    // ✅ Load JSON safely
-    fetch("places.json")
-      .then(res => res.json())
-      .then(data => {
-        const container = document.getElementById("placesContainer");
-        container.innerHTML = "";
+  // ✅ Load data from places.json
+  fetch("places.json")
+    .then(response => response.json())
+    .then(data => {
+      const container = document.getElementById("placesContainer");
+      container.innerHTML = "";
 
-        data.forEach(p => {
-          const name = p.name || p.Place_Name || p.place_name || "Unknown Place";
-          const location = p.location || p.State || p.City || "Unknown Location";
-          const price = p.price || p.Entry_Fee || p.ticket_price || 0;
-          const image = p.image_url || p.Image || "https://via.placeholder.com/250x160?text=Tourist+Place";
+      data.forEach(p => {
+        const name = p.Place || "Unknown Place";
+        const location = p.State || "Unknown Location";
+        const price = p.EntryFee ? parseInt(p.EntryFee) : 0;
+        const image = "https://via.placeholder.com/250x160?text=" + encodeURIComponent(name);
 
-          const card = document.createElement("div");
-          card.className = "place-card";
-          card.innerHTML = `
-            <img src="${image}" alt="${name}">
-            <div class="place-info">
-              <h3>${name}</h3>
-              <p><b>Location:</b> ${location}</p>
-              <p><b>Price:</b> ₹${price}</p>
-              <button onclick="openModal('${name}', ${price})">Book Now</button>
-            </div>
-          `;
-          container.appendChild(card);
-        });
-      })
-      .catch(err => {
-        console.error("Error loading JSON:", err);
-        document.getElementById("placesContainer").textContent = "⚠️ Error loading places.json";
+        const card = document.createElement("div");
+        card.className = "place-card";
+        card.innerHTML = `
+          <img src="${image}" alt="${name}">
+          <div class="place-info">
+            <h3>${name}</h3>
+            <p><b>Location:</b> ${location}</p>
+            <p><b>Price:</b> ₹${price}</p>
+            <button onclick="openModal('${name}', ${price})">Book Now</button>
+          </div>
+        `;
+        container.appendChild(card);
       });
-
-    // Modal logic
-    function openModal(name, price) {
-      selectedPlace = name;
-      selectedPrice = price;
-      document.getElementById("modalTitle").innerText = `Book: ${name}`;
-      document.getElementById("modalPrice").innerText = `Ticket Price: ₹${price}`;
-      document.getElementById("totalPrice").innerText = price;
-      document.getElementById("bookingModal").style.display = "flex";
-    }
-    function closeModal() { document.getElementById("bookingModal").style.display = "none"; }
-    document.getElementById("ticketCount").addEventListener("input", function() {
-      const count = this.value || 0;
-      document.getElementById("totalPrice").innerText = selectedPrice * count;
-    });
-    document.getElementById("confirmBooking").addEventListener("click", function() {
-      const count = document.getElementById("ticketCount").value;
-      const total = document.getElementById("totalPrice").innerText;
-      const pin = document.getElementById("pin").value;
-      if (!count || count <= 0) return alert("Please enter number of tickets.");
-      if (!pin) return alert("Please enter payment PIN.");
-
-      const message = `Booking Confirmed!\n\nPlace: ${selectedPlace}\nTickets: ${count}\nTotal: ₹${total}`;
-      alert(message);
-      speakMessage(message);
-      closeModal();
+    })
+    .catch(err => {
+      console.error("Error loading JSON:", err);
+      document.getElementById("placesContainer").textContent = "⚠️ Failed to load data.";
     });
 
-    function speakMessage(text) {
-      const speech = new SpeechSynthesisUtterance(text);
-      speech.lang = "en-IN";
-      window.speechSynthesis.speak(speech);
-    }
-  </script>
+  // ✅ Booking modal
+  function openModal(name, price) {
+    selectedPlace = name;
+    selectedPrice = price;
+    document.getElementById("modalTitle").innerText = `Book: ${name}`;
+    document.getElementById("modalPrice").innerText = `Ticket Price: ₹${price}`;
+    document.getElementById("totalPrice").innerText = price;
+    document.getElementById("bookingModal").style.display = "flex";
+  }
+
+  function closeModal() {
+    document.getElementById("bookingModal").style.display = "none";
+  }
+
+  document.getElementById("ticketCount").addEventListener("input", function() {
+    const count = this.value || 0;
+    document.getElementById("totalPrice").innerText = selectedPrice * count;
+  });
+
+  document.getElementById("confirmBooking").addEventListener("click", function() {
+    const count = document.getElementById("ticketCount").value;
+    const total = document.getElementById("totalPrice").innerText;
+    const pin = document.getElementById("pin").value;
+
+    if (!count || count <= 0) return alert("Please enter number of tickets.");
+    if (!pin) return alert("Please enter payment PIN.");
+
+    const message = `Booking Confirmed!\n\nPlace: ${selectedPlace}\nTickets: ${count}\nTotal: ₹${total}`;
+    alert(message);
+    speakMessage(message);
+    closeModal();
+  });
+
+  function speakMessage(text) {
+    const speech = new SpeechSynthesisUtterance(text);
+    speech.lang = "en-IN";
+    window.speechSynthesis.speak(speech);
+  }
+</script>
+
 </body>
 </html>
+
